@@ -6,15 +6,7 @@ const Home = () => {
 
   const [blogs, setBlogs] = useState( null );
 
-  const handleDelete = (id) => {
-    const newBlogs = blogs.filter((blog) => blog.id !== id);
-    setBlogs(newBlogs);
-    console.log("newBlogs component :", newBlogs);
-  };
-
-  const [name, setName] = useState('Mario');
-
-  console.log("from Home component :", blogs);
+   console.log("from Home component :", blogs);
 
   useEffect(() => {
     // console.log("use Effect running", name);
@@ -31,9 +23,8 @@ const Home = () => {
 
   return (
     <div className="home">
-      { blogs && <BlogList blogs={blogs} title="All blogs" handleDelete={handleDelete} />}
-      <button onClick={ () => setName('luigi')} >change name</button>
-      <p>{ name }</p>
+      { blogs && <BlogList blogs={blogs} title="All blogs"  />}
+     
      
     </div>
   );
