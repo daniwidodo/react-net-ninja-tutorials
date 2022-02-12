@@ -20,6 +20,7 @@ function App() {
             <Route path="/blogs/:id">
               <BlogDetails />
             </Route>
+            
           </Switch>
         </div>
       </div>
